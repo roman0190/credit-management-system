@@ -15,7 +15,7 @@ export class UsersService {
   }
 
   async create(createUserDto): Promise<User> {
-    const { username, password, role = 'user', credit = 0 } = createUserDto;
+    const { username, password, role = 'admin', credit = 0 } = createUserDto;
 
     // Check if the username already exists
     const existingUser = await this.userRepository.findOne({
