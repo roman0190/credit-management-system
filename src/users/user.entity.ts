@@ -1,7 +1,6 @@
 import { Transaction } from '../transactions/transaction.entity';
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
 
-
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
@@ -13,7 +12,7 @@ export class User {
   @Column()
   password: string;
 
-  @Column({ default: 'user' })
+  @Column({ default: 'admin' })
   role: string; // user/admin
 
   @Column({ default: 0 })
